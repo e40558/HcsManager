@@ -4,6 +4,8 @@ import { FrameworkBodyComponent } from './framework-body/framework-body.componen
 import { ContentComponent } from '../fw/content/content.component';
 import { TitleBarComponent } from './title-bar/title-bar.component';
 import { StatusBarComponent } from './status-bar/status-bar.component';
+import { FrameworkConfigService } from './services/framework-config.service';
+import { TopBarComponent } from './top-bar/top-bar.component';
 
 
 
@@ -11,7 +13,10 @@ import { StatusBarComponent } from './status-bar/status-bar.component';
    imports: [
     CommonModule
   ],
-  declarations: [FrameworkBodyComponent, ContentComponent, TitleBarComponent, StatusBarComponent
+  declarations: [FrameworkBodyComponent, ContentComponent, TitleBarComponent, StatusBarComponent, TopBarComponent
+  ],
+  providers: [
+    FrameworkConfigService
   ],
   exports: [
     FrameworkBodyComponent
