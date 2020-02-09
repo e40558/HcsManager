@@ -7,6 +7,8 @@ import { StatusBarComponent } from './status-bar/status-bar.component';
 import { FrameworkConfigService } from './services/framework-config.service';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ScreenService } from './services/screen.service.service';
+import { ScreenBelowLarge } from './directives/screen-below-large.directive';
+import { ScreenLarge } from './directives/screen-large.directive';
 
 
 
@@ -14,7 +16,14 @@ import { ScreenService } from './services/screen.service.service';
    imports: [
     CommonModule
   ],
-  declarations: [FrameworkBodyComponent, ContentComponent, TitleBarComponent, StatusBarComponent, TopBarComponent
+  declarations: [
+    FrameworkBodyComponent,
+    ContentComponent,
+    TitleBarComponent,
+    StatusBarComponent,
+    TopBarComponent,
+    ScreenBelowLarge,
+    ScreenLarge
   ],
   providers: [
     FrameworkConfigService,
