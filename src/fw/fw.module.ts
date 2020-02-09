@@ -5,9 +5,13 @@ import { FrameworkBodyComponent } from './framework-body/framework-body.componen
 
 
 @NgModule({
-  declarations: [FrameworkBodyComponent],
-  imports: [
+   imports: [
     CommonModule
+  ],
+  declarations: [FrameworkBodyComponent
+  ],
+  exports: [
+    FrameworkBodyComponent
   ]
 })
 export class FwModule { }
