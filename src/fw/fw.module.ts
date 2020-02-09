@@ -6,6 +6,7 @@ import { TitleBarComponent } from './title-bar/title-bar.component';
 import { StatusBarComponent } from './status-bar/status-bar.component';
 import { FrameworkConfigService } from './services/framework-config.service';
 import { TopBarComponent } from './top-bar/top-bar.component';
+import { ScreenService } from './services/screen.service.service';
 
 
 
@@ -16,7 +17,8 @@ import { TopBarComponent } from './top-bar/top-bar.component';
   declarations: [FrameworkBodyComponent, ContentComponent, TitleBarComponent, StatusBarComponent, TopBarComponent
   ],
   providers: [
-    FrameworkConfigService
+    FrameworkConfigService,
+    ScreenService
   ],
   exports: [
     FrameworkBodyComponent
