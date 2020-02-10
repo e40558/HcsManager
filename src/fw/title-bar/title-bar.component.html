@@ -1,16 +1,16 @@
 
-<div *screenBelowLarge
-     class="title-bar-small"
-     (click)="menuService.toggleLeftSideMenu()">
-  <span><i class="fas fa-bars"></i></span>
+<div *screenBelowLarge class="title-bar-small">
+  <span class="fa fa-bars"
+        (click)="menuService.toggleLeftSideMenu()">
+   </span>
   <div class="small-image-holder">
       <img class="small-image" src="assets/logo.png">
   </div>
-  <span><i class="fas fa-ellipsis-v"></i></span>
+  <span class="glyphicon glyphicon-option-vertical"></span>
 </div>
 
 <div *screenLarge class="title-bar user-title-bar">
-  <img src="assets/logo.png" alt="HCS Manager">
+  <img src="assets/logo.png" alt="Green Nations Logo">
   <div class="menu-area" >
       <fw-top-bar>
       </fw-top-bar>
@@ -18,4 +18,3 @@
       </fw-menu>
   </div>
 </div>
-

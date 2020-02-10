@@ -26,10 +26,6 @@
   color: white;
 }
 
-:host(.vertical-menu.in-popup) {
-  padding-left: 16px;
-}
-
 span {
   pointer-events: none;
 }
@@ -58,9 +54,9 @@ span {
 }
 
 .router-link-active {
-  background-color: rgb(219, 205, 214);
+  background-color: #dfd;
 }
 
 .router-link-active.vertical-menu {
-  background-color: rgb(184, 133, 167);
+  background-color: green;
 }
