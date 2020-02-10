@@ -10,12 +10,17 @@ import { ScreenService } from './services/screen.service.service';
 import { ScreenBelowLarge } from './directives/screen-below-large.directive';
 import { ScreenLarge } from './directives/screen-large.directive';
 import { MenuService } from './services/menu.service';
+import { MenuComponent } from '../menus/menu/menu.component';
+import { MenuItemComponent } from '../menus/menu-item/menu-item.component';
+import { PopupMenuComponent } from '../menus/popup-menu/popup-menu.component';
+import { RouterModule } from '@angular/router';
 
 
 
 @NgModule({
    imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   declarations: [
     FrameworkBodyComponent,
@@ -24,7 +29,10 @@ import { MenuService } from './services/menu.service';
     StatusBarComponent,
     TopBarComponent,
     ScreenBelowLarge,
-    ScreenLarge
+    ScreenLarge,
+    MenuComponent,
+    MenuItemComponent,
+    PopupMenuComponent
   ],
   providers: [
     FrameworkConfigService,

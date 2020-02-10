@@ -3,3 +3,8 @@
   background-color: rgb(248, 241, 248);
   flex-grow: 1;
 }
+
+.body-style{
+  padding: 20px;
+  flex-grow: 1;
+}
