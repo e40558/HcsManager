@@ -58,9 +58,9 @@ span {
 }
 
 .router-link-active {
-  background-color: #dfd;
+  background-color: rgb(219, 205, 214);
 }
 
 .router-link-active.vertical-menu {
-  background-color: green;
+  background-color: rgb(184, 133, 167);
 }
