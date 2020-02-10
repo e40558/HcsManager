@@ -9,6 +9,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { ScreenService } from './services/screen.service.service';
 import { ScreenBelowLarge } from './directives/screen-below-large.directive';
 import { ScreenLarge } from './directives/screen-large.directive';
+import { MenuService } from './services/menu.service';
 
 
 
@@ -27,7 +28,8 @@ import { ScreenLarge } from './directives/screen-large.directive';
   ],
   providers: [
     FrameworkConfigService,
-    ScreenService
+    ScreenService,
+    MenuService
   ],
   exports: [
     FrameworkBodyComponent
