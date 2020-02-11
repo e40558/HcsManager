@@ -1,13 +1,25 @@
 import { Component, ElementRef, HostBinding, HostListener,
-  Input, OnInit, Renderer, Renderer2 } from '@angular/core';
+  Input, OnInit, Renderer} from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { MenuItem, MenuService } from 'src/fw/services/menu.service';
+import { transition, trigger, style, animate } from '@angular/animations';
 
 
 @Component({
 selector: 'fw-menu-item',
 templateUrl: './menu-item.component.html',
-styleUrls: ['./menu-item.component.css']
+styleUrls: ['./menu-item.component.css'],
+  animations: [
+        trigger('visibilityChanged', [
+            transition(':enter', [   // :enter is alias to 'void => *'
+                style({opacity: 0}),
+                animate(1000, style({opacity: 1}))
+            ]),
+            transition(':leave', [   // :leave is alias to '* => void'
+                animate(500, style({opacity: 0}))
+            ])
+        ])
+    ]
 })
 export class MenuItemComponent implements OnInit {
 @Input() item =  null as MenuItem;  // see angular-cli issue #2034
