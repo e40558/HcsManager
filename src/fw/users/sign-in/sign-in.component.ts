@@ -16,9 +16,7 @@ export class SignInComponent {
 
   constructor(private userApi: UserApi,
               private router: Router) { }
-
               onSubmit(signInForm: NgForm) {
-
                 if (signInForm.valid) {
 
                   console.log('submitting...', signInForm);
