@@ -15,6 +15,7 @@ import { AuthenticatedUserComponent } from './authenticated-user/authenticated-u
 import { UserService } from './services/user.service';
 import { UserApi } from '../fw/users/user-api';
 import { AuthGuard } from './services/auth-guard.service';
+import { AppDataService } from './services/app-data.service';
 
 
 
@@ -36,6 +37,7 @@ import { AuthGuard } from './services/auth-guard.service';
   ],
   providers: [
     UserService,
+    AppDataService,
     AuthGuard,
     { provide: UserApi, useExisting: UserService }
   ],
