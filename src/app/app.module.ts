@@ -16,6 +16,8 @@ import { UserService } from './services/user.service';
 import { UserApi } from '../fw/users/user-api';
 import { AuthGuard } from './services/auth-guard.service';
 import { AppDataService } from './services/app-data.service';
+import { LocationListComponent } from './locations/locations-list.component';
+import { ProviderComponent } from './provider/provider.component';
 
 
 
@@ -27,7 +29,9 @@ import { AppDataService } from './services/app-data.service';
     CountryDetailComponent,
     CountryListComponent,
     CountryMaintComponent,
-    AuthenticatedUserComponent
+    AuthenticatedUserComponent,
+    LocationListComponent,
+    ProviderComponent
   ],
   imports: [
     BrowserModule,

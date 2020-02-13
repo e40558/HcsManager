@@ -8,6 +8,18 @@ export let initialMenuItems: Array<MenuItem> = [
       submenu: null
   },
   {
+    text: 'Locations',
+    icon: 'glyphicon-dashboard',
+    route: '/authenticated/locations',
+    submenu: null
+ },
+ {
+    text: 'Provider',
+    icon: 'glyphicon-dashboard',
+    route: '/authenticated/provider',
+    submenu: null
+ },
+  {
       text: 'Countries',
       icon: 'glyphicon-flag',
       route: null,

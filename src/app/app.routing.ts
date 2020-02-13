@@ -10,6 +10,8 @@ import { SettingsComponent } from './settings/settings.component';
 import { SignInComponent } from '../fw/users/sign-in/sign-in.component';
 import { RegisterUserComponent } from '../fw/users/register-user/register-user.component';
 import { AuthGuard } from './services/auth-guard.service';
+import { LocationListComponent } from './locations/locations-list.component';
+import { ProviderComponent } from './provider/provider.component';
 
 export const appRoutes: Routes = [
   { path: 'signin', component: SignInComponent },
@@ -20,6 +22,8 @@ export const appRoutes: Routes = [
         children: [
           { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
           { path: 'dashboard', component: DashboardComponent },
+          { path: 'provider', component: ProviderComponent },
+          { path: 'locations', component: LocationListComponent },
           { path: 'country-list/:count', component: CountryListComponent },
           { path: 'country-detail/:id/:operation', component: CountryDetailComponent },
           { path: 'country-maint', component: CountryMaintComponent },
