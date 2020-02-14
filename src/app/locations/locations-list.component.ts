@@ -6,10 +6,10 @@ templateUrl: './locations-list.component.html',
 
 })
 export  class LocationListComponent {
-  location = {
+  locations = [ {
   name: 'Wood',
   created: '9/26/2036',
-  locationCode: 'wood',
+  locationCode: '1234',
   street: '622 Southwood Drive',
   city: 'Duncanville',
   zip: '75137',
@@ -17,7 +17,20 @@ export  class LocationListComponent {
   county: 'Dallas',
   PpoviderId: 1,
   imageSource: '/assets/images/angularconnect-shield.png',
-  };
+  },
+  {
+    name: 'West',
+    created: '9/26/2036',
+    locationCode: '1234',
+    street: '622 Southwood Drive',
+    city: 'Duncanville',
+    zip: '75137',
+    state: 'TX',
+    county: 'Dallas',
+    PpoviderId: 1,
+    imageSource: '/assets/images/angularconnect-shield.png',
+    },
+];
 
 }
 

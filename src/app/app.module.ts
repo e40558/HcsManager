@@ -18,6 +18,8 @@ import { AuthGuard } from './services/auth-guard.service';
 import { AppDataService } from './services/app-data.service';
 import { LocationListComponent } from './locations/locations-list.component';
 import { ProviderComponent } from './provider/provider.component';
+import { ProviderThumbnailComponent } from './provider-thumbnail/provider-thumbnail.component';
+import { LocationThumbnailComponent } from './location-thumbnail/location-thumbnail.component';
 
 
 
@@ -31,7 +33,9 @@ import { ProviderComponent } from './provider/provider.component';
     CountryMaintComponent,
     AuthenticatedUserComponent,
     LocationListComponent,
-    ProviderComponent
+    ProviderComponent,
+    ProviderThumbnailComponent,
+    LocationThumbnailComponent
   ],
   imports: [
     BrowserModule,
