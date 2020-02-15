@@ -12,6 +12,7 @@ import { RegisterUserComponent } from '../fw/users/register-user/register-user.c
 import { AuthGuard } from './services/auth-guard.service';
 import { LocationListComponent } from './locations/locations-list.component';
 import { ProviderComponent } from './provider/provider.component';
+import { NotificationComponent } from './notification/notification.component';
 
 export const appRoutes: Routes = [
   { path: 'signin', component: SignInComponent },
@@ -21,7 +22,7 @@ export const appRoutes: Routes = [
       { path: '', canActivateChild: [AuthGuard],
         children: [
           { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-          { path: 'dashboard', component: DashboardComponent },
+          { path: 'dashboard', component: NotificationComponent },
           { path: 'provider', component: ProviderComponent },
           { path: 'locations', component: LocationListComponent },
           { path: 'country-list/:count', component: CountryListComponent },

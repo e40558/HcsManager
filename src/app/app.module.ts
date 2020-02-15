@@ -20,6 +20,9 @@ import { LocationListComponent } from './locations/locations-list.component';
 import { ProviderComponent } from './provider/provider.component';
 import { ProviderThumbnailComponent } from './provider-thumbnail/provider-thumbnail.component';
 import { LocationThumbnailComponent } from './location-thumbnail/location-thumbnail.component';
+import { NotificationComponent } from './notification/notification.component';
+import { ToastrModule } from 'ngx-toastr';
+import { NotificationService } from './core/notification.service';
 
 
 
@@ -35,16 +38,26 @@ import { LocationThumbnailComponent } from './location-thumbnail/location-thumbn
     LocationListComponent,
     ProviderComponent,
     ProviderThumbnailComponent,
-    LocationThumbnailComponent
+    LocationThumbnailComponent,
+    NotificationComponent
+
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FwModule,
+    ToastrModule.forRoot(
+      {
+        positionClass: 'top-left',
+        closeButton: true,
+
+      }
+    ),
     RouterModule.forRoot(appRoutes)
   ],
   providers: [
     UserService,
+    NotificationService,
     AppDataService,
     AuthGuard,
     { provide: UserApi, useExisting: UserService }
