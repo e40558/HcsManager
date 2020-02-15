@@ -1,13 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { AppComponent } from './app.component';
+import { RouterModule } from '@angular/router';
+
+
 import { FwModule } from '../fw/fw.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SettingsComponent } from './settings/settings.component';
 import { appRoutes } from './app.routing';
-import { RouterModule } from '@angular/router';
+
 import { CountryDetailComponent } from './country-detail/country-detail.component';
 import { CountryListComponent } from './country-list/country-list.component';
 import { CountryMaintComponent } from './country-maint/country-maint.component';
@@ -23,6 +25,7 @@ import { LocationThumbnailComponent } from './location-thumbnail/location-thumbn
 import { NotificationComponent } from './notification/notification.component';
 import { ToastrModule } from 'ngx-toastr';
 import { NotificationService } from './core/notification.service';
+import { ConsumerModule } from './consumer/consumer.module';
 
 
 
@@ -41,6 +44,7 @@ import { NotificationService } from './core/notification.service';
     LocationThumbnailComponent,
     NotificationComponent
 
+
   ],
   imports: [
     BrowserModule,
@@ -53,7 +57,8 @@ import { NotificationService } from './core/notification.service';
 
       }
     ),
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    ConsumerModule
   ],
   providers: [
     UserService,

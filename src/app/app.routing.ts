@@ -13,6 +13,7 @@ import { AuthGuard } from './services/auth-guard.service';
 import { LocationListComponent } from './locations/locations-list.component';
 import { ProviderComponent } from './provider/provider.component';
 import { NotificationComponent } from './notification/notification.component';
+import { ConsumerListComponent } from './consumer/consumer-list/consumer-list.component';
 
 export const appRoutes: Routes = [
   { path: 'signin', component: SignInComponent },
@@ -22,6 +23,7 @@ export const appRoutes: Routes = [
       { path: '', canActivateChild: [AuthGuard],
         children: [
           { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+          { path: 'consumers', component: ConsumerListComponent },
           { path: 'dashboard', component: NotificationComponent },
           { path: 'provider', component: ProviderComponent },
           { path: 'locations', component: LocationListComponent },
